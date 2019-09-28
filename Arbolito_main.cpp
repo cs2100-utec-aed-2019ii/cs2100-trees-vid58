@@ -258,6 +258,9 @@ public:
     }
 
 
+    int antepasado(Node *arbol){
+        return arbol->padre->dato;
+    }
 
 
 };
@@ -301,7 +304,7 @@ int main(){
     arbol1->inOrden(nodin);cout<<endl;
     arbol1->postOrden(nodin);cout<<endl;
 
-
+    cout<<"antepasado: "<<arbol1->antepasado(nodin->izq->izq);
     cout<<"\n///////////////////////\n\n";
 
     Tree *arbol2;
@@ -329,11 +332,12 @@ int main(){
     arbol2->inOrden(nodel);cout<<endl;
     arbol2->postOrden(nodel);cout<<endl;
 
+    cout<<"antepasado: "<<arbol2->antepasado(nodel->der->der);
 
     cout<<"\n///////////////////////\n\n";
 
     //Retorna 0 si son iguales, si son diferentes retornara 1
-    cout<<iguales(arbol1,arbol2);
+    cout<<iguales(arbol1,arbol2)<<endl;
 
     //int i=0;
     int a[tamano1];
@@ -341,12 +345,11 @@ int main(){
 
 
 
-    //cout<<nodin->der->dato;
-    /*tamano1 = arbol1->tamano(nodin);
-    cout<<tamano1<<endl;
+    tamano1 = arbol1->tamano(nodin);
+    cout<<"Capacidad maxima del arbol 1: "<<tamano1<<endl;
     tamano2 = arbol2->tamano(nodin);
-    cout<<tamano2<<endl<<endl;
-
+    cout<<"Capacidad maxima del arbol 2: "<<tamano2<<endl;
+/*
     arbol1->arreglin(nodin,a);
 
     for(int i=0;i<tamano1;i++){
