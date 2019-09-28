@@ -303,8 +303,14 @@ int main(){
     arbol1->preOrden(nodin);cout<<endl;
     arbol1->inOrden(nodin);cout<<endl;
     arbol1->postOrden(nodin);cout<<endl;
-
     cout<<"antepasado: "<<arbol1->antepasado(nodin->izq->izq);
+    //cout<<endl;
+    //arbol1->eliminar(nodin,4);
+    //arbol1->mostrar(nodin,contador);
+    //arbol1->BorrarTodo(nodin);
+    //arbol1->mostrar(nodin,contador);
+
+
     cout<<"\n///////////////////////\n\n";
 
     Tree *arbol2;
@@ -331,15 +337,19 @@ int main(){
     arbol2->preOrden(nodel);cout<<endl;
     arbol2->inOrden(nodel);cout<<endl;
     arbol2->postOrden(nodel);cout<<endl;
-
     cout<<"antepasado: "<<arbol2->antepasado(nodel->der->der);
+    //cout<<endl;
+    //arbol2->eliminar(nodel,13);
+    //arbol2->mostrar(nodel,contador);
+    //arbol2->BorrarTodo(nodel);
+    //arbol2->mostrar(nodel,contador);
+
 
     cout<<"\n///////////////////////\n\n";
 
     //Retorna 0 si son iguales, si son diferentes retornara 1
     cout<<iguales(arbol1,arbol2)<<endl;
 
-    //int i=0;
     int a[tamano1];
     int b[tamano2];
 
@@ -349,6 +359,9 @@ int main(){
     cout<<"Capacidad maxima del arbol 1: "<<tamano1<<endl;
     tamano2 = arbol2->tamano(nodin);
     cout<<"Capacidad maxima del arbol 2: "<<tamano2<<endl;
+
+
+    //intentos :c
 /*
     arbol1->arreglin(nodin,a);
 
